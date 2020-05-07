@@ -1,0 +1,19 @@
+#include <avr/io.h>
+
+int main(void)
+{
+    DDRA =0xFF;
+	PORTA = 0xFF;
+    DDRB =0xFF;
+	PORTB = 0xFF;	
+    DDRC =0xFF;
+	PORTC = 0xFF;	
+	DDRD=0xFF;
+	PORTD= 0xFF;
+	unsigned a=35, b=35;
+		
+	PORTA=a;
+	PORTB=b;
+	PORTC=~PORTB+1;
+	PORTD=PORTA+PORTC;
+}
